@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="node_modules/confetti-js/dist/index.min.js"></script>
+    <script src="script.js"></script>
+    <title>Pompompurin</title>
+</head>
+<body>
+    <canvas id="confetti-holder"></canvas>
+    <div id="menu">
+        <span style="font-size: x-large;">Settings</span>
+        <br>
+        <div>
+            <label for="input-num-progress">Number of clicks: </label>
+            <input id="input-num-progress" type="number" min="1" style="width: 40px;">
+        </div>
+        <br>
+        <button id="button-start" style="width: 80px">Start</button>
+    </div>
+
+    <div id="main-container" class="container">
+
+        <div id="progress-bar" style="display: none;">
+
+            <div id="outline"></div>
+            <div id="under">
+                <div id="over"></div>
+            </div>        
+            
+        </div>
+
+        <div id="celebration" style="display: none"></div>
+        
+        
+</body>
+</html>

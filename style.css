@@ -1,0 +1,121 @@
+:root {
+    --widget-size: 60vh;
+}
+
+/* fill body to span the whole page */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* MENU */
+#menu {
+    z-index: 10;
+    position: fixed;
+    
+    background-color: rgba(0, 0, 0, 0.8);
+
+    border-radius: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 1);
+    border-width: 2px;
+    
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    color: white;
+
+    transition: all 1s;
+    opacity: 0.01;
+}
+
+#menu:hover {
+    opacity: 1;
+}
+
+
+/* PROGRESS BAR */
+#main-container {
+    height: var(--widget-size);
+    transition: scale 1s;
+}
+
+#main-container:hover {
+    scale: 105%;
+}
+
+#under {
+    background: url(pompompurin.png), #fff;
+    background-position: bottom center;
+    background-size: cover;
+
+    background-blend-mode: luminosity;
+    
+    height: var(--widget-size);
+    width: var(--widget-size);
+
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+}
+
+#outline {
+    z-index: 2;
+
+    position: fixed;
+
+    background: url(pompompurin-outline.png);
+    background-position: bottom center;
+    background-size: cover;
+    height: var(--widget-size);
+    width: var(--widget-size);
+
+    /*
+    margin: calc( -1 * var(--widget-size)) 0;
+    */
+}
+
+
+
+/* CELEBRATION */
+#confetti-holder {
+    z-index: 3;
+    position: fixed;
+}
+
+#celebration {
+    background: url(pompompurin.png);
+    background-position: bottom center;
+    background-size: cover;
+    
+    height: var(--widget-size);
+    width: var(--widget-size);
+
+    animation: jump-up-down 1s cubic-bezier(0.92, 0.02, 0.12, 0.99) infinite;
+}
+
+@keyframes jump-up-down {
+    0% {
+        transform: translateY(0) scaleX(1);
+    }
+    50% {
+        transform: translateY(-100px) scaleX(-1);
+    }
+    100% {
+        transform: translateY(0) scaleX(1);
+    }
+}
+
